@@ -2,8 +2,6 @@
 
 use std::str;
 use std::fmt;
-// use std::f32::Float;
-use core::num::Float;
 use libc::{c_float, size_t, c_uchar, c_uint};
 use std::ops::{Add, Div, Mul, Sub};
 
@@ -262,7 +260,7 @@ impl Vector2D {
     /// Calculate the norm of the vector
     #[inline]
     pub fn rnorm(&self) -> f32 {
-        self.dot(self).rsqrt()
+        1.0 / self.dot(self).sqrt()
     }
 
     /// Normalize the vector
@@ -382,7 +380,7 @@ impl Vector3D {
     /// Calculate the norm of the vector
     #[inline]
     pub fn rnorm(&self) -> f32 {
-        self.dot(self).rsqrt()
+        1.0 / self.dot(self).sqrt()
     }
 
     /// Normalize the vector
@@ -522,7 +520,7 @@ impl Quaternion {
     /// Calculate the norm of the quaternion
     #[inline]
     pub fn rnorm(&self) -> f32 {
-        self.dot(self).rsqrt()
+        1.0 / self.dot(self).sqrt()
     }
 
     /// Normalize the quaternion

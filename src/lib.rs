@@ -12,12 +12,8 @@
 #![deny(unused_results)]
 #![warn(unused_imports)]
 
-#![feature(core, collections)]
-#![feature(libc)]
-
 extern crate libc;
 extern crate vecmath;
-extern crate core;
 
 pub use types::{Vector2D, Vector3D, Color3D, Color4D, Matrix3x3, Matrix4x4,
                 Quaternion, Plane, Ray, AiString};

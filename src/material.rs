@@ -199,6 +199,7 @@ pub enum TextureType {
     Unknown = 0xC,
 }
 
+/// Some strange constant
 pub const AI_TEXTURE_TYPE_MAX : u32 = TextureType::Unknown as u32;
 
 /// Defines all shading models supported by the library

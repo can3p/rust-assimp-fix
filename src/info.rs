@@ -142,7 +142,7 @@ pub fn get_legal_string() -> String {
         let s = ffi::aiGetLegalString();
         let buff = CStr::from_ptr(s).to_bytes();
         let slice = from_utf8(buff).unwrap();
-        String::from_str(slice)
+        slice.to_string()
         //CString::new(ffi::aiGetLegalString(), false).to_string()
     }
 }

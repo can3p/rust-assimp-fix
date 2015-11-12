@@ -14,5 +14,6 @@ license = "MIT"
 name = "assimp"
 path = "./src/lib.rs"
 
-[dependencies.vecmath]
+[dependencies]
 vecmath = "0.0.22"
+libc = "0.2"
