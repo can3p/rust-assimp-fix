@@ -1,0 +1,16 @@
+language: rust
+os:
+    - linux
+before_script:
+    - rustc --version
+    - cargo --version
+install:
+    - sudo apt-get update -qq
+    - sudo apt-get install libassimp-dev
+script:
+    - cargo build
+    - cargo doc
+after_success:
+    - cp -R target/doc doc
+    - curl http://www.rust-ci.org/artifacts/put?t=$RUSTCI_TOKEN | sh
+    - rm -r doc
