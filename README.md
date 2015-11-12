@@ -4,7 +4,8 @@ rust-assimp [![Build Status](https://travis-ci.org/jemcroft/rust-assimp.svg?bran
 [Documentation](http://www.rust-ci.org/jemcroft/rust-assimp/doc/assimp/)
 
 ## Notice
-This code is currently unstable.
+Original repo vanished a while ago. This one is just an attempt to get
+a working build on a stable version of the compiler.
 
 ## Building
 
