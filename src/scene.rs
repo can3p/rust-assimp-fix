@@ -83,7 +83,7 @@ impl Node {
 
 /// Flags to check the completeness of an imported scene.
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
-#[repr(C, u32)]
+#[repr(u32)]
 pub enum SceneFlags {
     /// Specifies that the scene data structure that was imported is not
     /// complete.
