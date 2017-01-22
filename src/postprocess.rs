@@ -2,7 +2,7 @@
 
 /// Post processing steps that can be applied once a model is loaded
 #[derive(Clone, Copy)]
-#[repr(C, u32)]
+#[repr(u32)]
 pub enum Process {
     /// Calculates the tangents and bitangents for the imported meshes.
     ///
@@ -443,7 +443,7 @@ pub enum Process {
     /// *  Process::Triangulate
     /// *  Process::GenUVCoords
     /// *  Process::SortByPType
-    Preset_TargetRealtime_Fast = 0x4802b,
+    PresetTargetRealtimeFast = 0x4802b,
 
     /// Default postprocess configuration optimizing the data for real-time
     /// rendering.
@@ -470,7 +470,7 @@ pub enum Process {
     /// *  Process::SortByPType
     /// *  Process::FindDegenerates
     /// *  Process::FindInvalidData
-    Preset_TargetRealtime_Quality = 0x79acb,
+    PresetTargetRealtimeQuality = 0x79acb,
 
     /// Default postprocess configuration optimizing the data for real-time
     /// rendering.
@@ -489,7 +489,7 @@ pub enum Process {
     ///  *  Process::ValidateDataStructure
     ///  *  Process::OptimizeMeshes
     ///  *  Process::Debone
-    Preset_TargetRealtime_MaxQuality = 0x4379ecb,
+    PresetTargetRealtimeMaxQuality = 0x4379ecb,
 }
 
 #[cfg(test)]
@@ -520,7 +520,7 @@ mod test {
                                 Process::FindDegenerates           as u32 |
                                 Process::FindInvalidData           as u32 ;
     pub const PROCESSPRESET_TARGETREALTIME_MAXQUALITY_TEST : u32 =
-                            Process::Preset_TargetRealtime_Quality as u32 |
+                            Process::PresetTargetRealtimeQuality as u32 |
                             Process::FindInstances                 as u32 |
                             Process::ValidateDataStructure         as u32 |
                             Process::OptimizeMeshes                as u32 |
@@ -531,11 +531,11 @@ mod test {
     fn test_show_consts() {
         assert!(Process::ConvertToLeftHanded as u32 ==
                    PROCESS_CONVERTTOLEFTHANDED_TEST);
-        assert!(Process::Preset_TargetRealtime_MaxQuality as u32 ==
+        assert!(Process::PresetTargetRealtimeMaxQuality as u32 ==
                    PROCESSPRESET_TARGETREALTIME_MAXQUALITY_TEST);
-        assert!(Process::Preset_TargetRealtime_Quality as u32 ==
+        assert!(Process::PresetTargetRealtimeQuality as u32 ==
                    PROCESSPRESET_TARGETREALTIME_QUALITY_TEST);
-        assert!(Process::Preset_TargetRealtime_Fast as u32 ==
+        assert!(Process::PresetTargetRealtimeFast as u32 ==
                    PROCESSPRESET_TARGETREALTIME_FAST_TEST);
     }
 }

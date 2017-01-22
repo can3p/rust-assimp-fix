@@ -10,7 +10,7 @@ use std::ffi::CStr;
 
 /// Flags for checking how assimp was compiled
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
-#[repr(C, u32)]
+#[repr(u32)]
 pub enum CompileFlags {
     /// Assimp was compiled as a shared object (Windows: DLL)
     Shared = 0x1,

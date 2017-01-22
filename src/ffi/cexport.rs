@@ -14,7 +14,7 @@ use fileio::{AiFileIO};
 /// #aiGetExportFormatDescription() to retrieve a description of an export
 /// format option.
 #[repr(C)]
-struct ExportFormatDesc {
+pub struct ExportFormatDesc {
     /// a short string ID to uniquely identify the export format. Use this ID
     /// string to specify which file format you want to export to when calling
     /// #aiExportScene().  Example: "dae" or "obj"
@@ -41,7 +41,7 @@ struct ExportFormatDesc {
 /// more than one output file for a given #aiScene. See the remarks for
 /// #aiExportDataBlob::name for more information.
 #[repr(C)]
-struct RawExportDataBlob {
+pub struct RawExportDataBlob {
     /// Size of the data in bytes
     pub size: size_t,
 
@@ -157,11 +157,11 @@ extern {
     ///      run the step anyway.
     ///
     /// Returns a status code indicating the result of the export
-    pub fn aiExportScene( scene: *const RawScene,
-                      formatId: *const c_char,
-                      file_name: *const c_char,
-                      preprocessing: c_uint)
-                      -> Return;
+    pub fn aiExportScene(scene: *const RawScene,
+                         format_id: *const c_char,
+                         file_name: *const c_char,
+                         preprocessing: c_uint)
+                         -> Return;
 
 
     /// Releases the memory associated with the given exported data. Use this function to free a data blob
