@@ -1,7 +1,7 @@
 rust-assimp [![Build Status](https://travis-ci.org/jemcroft/rust-assimp.svg?branch=master)](https://travis-ci.org/jemcroft/rust-assimp)
 ===========
 
-[Documentation](http://www.rust-ci.org/jemcroft/rust-assimp/doc/assimp/)
+[Documentation](https://docs.rs/crate/rust-assimp/)
 
 ## Notice
 Original repo vanished a while ago. This one is just an attempt to get
