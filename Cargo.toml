@@ -4,7 +4,6 @@ version = "0.0.24"
 authors = ["jemcroft"]
 
 description = "A rust wrapper for assimp the open asset import library"
-documentation = "http://www.rust-ci.org/jemcroft/rust-assimp/doc/assimp/"
 keywords = ["3d", "model", "importer", "assimp", "binding"]
 repository = "https://github.com/can3p/rust-assimp-fix"
 readme = "README.md"
